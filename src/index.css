@@ -1,0 +1,246 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* Increased gap */
+  max-width: 00px; /* Increased width */
+  padding: 60px; /* Increased padding */
+  border-radius: 20px;
+  position: relative;
+  background-color: #1a1a1a;
+  color: #fff;
+  border: 1px solid #333;
+}
+
+.title {
+  font-size: 28px;
+  font-weight: 600;
+  letter-spacing: -1px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding-left: 30px;
+  color: #00bfff;
+}
+
+.message, 
+.signin {
+  font-size: 14.5px;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.signin {
+  text-align: center;
+}
+
+.signin a:hover {
+  text-decoration: underline royalblue;
+}
+
+.signin a {
+  color: #00bfff;
+}
+
+.input1 {
+  background-color: #333;
+  color: #fff;
+  width: 100%;
+  padding: 20px 5px 5px 10px;
+  outline: 0;
+  border: 1px solid rgba(105, 105, 105, 0.397);
+  border-radius: 10px;
+  font-size: medium;
+}
+
+.input1 + span {
+  color: rgba(255, 255, 255, 0.5);
+  position: absolute;
+  left: 10px;
+  top: 0px;
+  font-size: 0.9em;
+  cursor: text;
+  transition: 0.3s ease;
+}
+
+.input1:placeholder-shown + span {
+  top: 12.5px;
+  font-size: 0.9em;
+}
+
+.input1:focus + span,
+.input1:valid + span {
+  color: #00bfff;
+  top: 0px;
+  font-size: 0.7em;
+  font-weight: 600;
+}
+
+.submit {
+  border: none;
+  outline: none;
+  padding: 10px;
+  border-radius: 10px;
+  color: #fff;
+  font-size: 16px;
+  transform: .3s ease;
+  background-color: #00bfff;
+}
+
+.submit:hover {
+  background-color: #00bfff96;
+}
+/* Send Button Styles */
+.send-button {
+  font-family: inherit;
+  font-size: 20px;
+  background: royalblue; /* Button background color */
+  color: white; /* Text color */
+  padding: 0.7em 1em; /* Padding */
+  padding-left: 0.9em; /* Extra padding on the left */
+  display: flex; /* Flexbox for alignment */
+  align-items: center; /* Center align items vertically */
+  border: none; /* No border */
+  border-radius: 16px; /* Rounded corners */
+  overflow: hidden; /* Clip overflowing content */
+  transition: all 0.2s; /* Smooth transition for hover effects */
+  cursor: pointer; /* Pointer cursor on hover */
+}
+
+.send-button span {
+  display: block; /* Block display for text */
+  margin-left: 0.3em; /* Space between icon and text */
+  transition: all 0.3s ease-in-out; /* Smooth transition for text on hover */
+}
+
+.send-button svg {
+  display: block; /* Block display for SVG icon */
+  transform-origin: center center; /* Transform origin for the icon */
+  transition: transform 0.3s ease-in-out; /* Smooth transition for icon on hover */
+}
+
+.send-button:hover .svg-wrapper {
+  animation: fly-1 0.6s ease-in-out infinite alternate; /* Animation on hover */
+}
+
+.send-button:hover svg {
+  transform: translateX(1.2em) rotate(45deg) scale(1.1); /* Hover effects for the icon */
+}
+
+.send-button:hover span {
+  transform: translateX(5em); /* Hover effects for the text */
+}
+
+.send-button:active {
+  transform: scale(0.95); /* Scale down effect on active click */
+}
+
+@keyframes fly-1 {
+  from {
+    transform: translateY(0.1em); /* Start position for animation */
+  }
+
+  to {
+    transform: translateY(-0.1em); /* End position for animation */
+  }
+}
+/* From Uiverse.io by vinodjangid07 */ 
+.Btn {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 45px;
+  height: 45px;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition-duration: .3s;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.199);
+  background-color: rgb(255, 65, 65);
+}
+
+/* plus sign */
+.sign {
+  width: 100%;
+  transition-duration: .3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sign svg {
+  width: 17px;
+}
+
+.sign svg path {
+  fill: white;
+}
+/* text */
+.text {
+  position: absolute;
+  right: 0%;
+  width: 0%;
+  opacity: 0;
+  color: white;
+  font-size: 1.2em;
+  font-weight: 600;
+  transition-duration: .3s;
+}
+/* hover effect on button width */
+.Btn:hover {
+  width: 125px;
+  border-radius: 40px;
+  transition-duration: .3s;
+}
+
+.Btn:hover .sign {
+  width: 30%;
+  transition-duration: .3s;
+  padding-left: 20px;
+}
+/* hover effect button's text */
+.Btn:hover .text {
+  opacity: 1;
+  width: 70%;
+  transition-duration: .3s;
+  padding-right: 10px;
+}
+/* button click effect*/
+.Btn:active {
+  transform: translate(2px ,2px);
+}
+.logout-container {
+  position: fixed; /* Fix the position */
+  top: 20px; /* Space from the top */
+  right: 20px; /* Space from the right */
+}
+/* From Uiverse.io by vinodjangid07 */ 
+.InputContainer {
+  width: 210px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(to bottom,rgb(227, 213, 255),rgb(255, 231, 231));
+  border-radius: 30px;
+  overflow: hidden;
+  cursor: pointer;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.075);
+}
+
+.input {
+  width: 200px;
+  height: 40px;
+  border: none;
+  outline: none;
+  caret-color: rgb(255, 81, 0);
+  background-color: rgb(255, 255, 255);
+  border-radius: 30px;
+  padding-left: 15px;
+  letter-spacing: 0.8px;
+  color: rgb(19, 19, 19);
+  font-size: 13.4px;
+}
